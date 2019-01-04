@@ -48,12 +48,3 @@
 	window.AutoComplete = AutoCompleteConstructor;
 
 })();
-
-
-
-
-
-
-
-
-
