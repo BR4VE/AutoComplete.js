@@ -10,7 +10,7 @@ Small &amp; fast autocomplete library in just 50 lines of code!
 ### JS:
 ```javascript
 let input = new AutoComplete(["hello","hell","hill","welcome"], "#example", (completeValues) => {
-console.log(completeValues);
+    console.log(completeValues);
 });
 ```
 ## Example
