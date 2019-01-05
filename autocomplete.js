@@ -7,10 +7,8 @@
 		let lastStep = [...startArray];
 		// general searchForward function
 		this.searchForward = inputValue => {
-			// shortuct for the last element
-			let lastElement = inputValue[inputValue.length - 1];
 			// loop through last step
-			lastStep = lastStep.filter(element => element.includes(lastElement) && element.includes(inputValue));
+			lastStep = lastStep.filter(element => element.includes(inputValue));
 			// add last step to general steps in order to turn back later
 			generalSteps.push({
 				stepValue: inputValue,
