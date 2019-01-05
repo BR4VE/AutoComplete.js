@@ -30,12 +30,12 @@
 			let value = event.target.value;
 			// if there is no previous step or the the user is adding new letters 
 			// and also the current value is not empty
-			if(value !== "" && (!lngt || event.target.value.length > generalSteps[lngt - 1].stepValue.length)) {
+			if(value !== "" && (!lngt || value.length > generalSteps[lngt - 1].stepValue.length)) {
 				this.searchForward(value);
 				// return the values with cb
 				cb(lastStep);
-				
-			} else {
+			// in order not the execute the function when pressed shift/capslock etc, use else if
+			} else if(lngt && ( value.length < generalSteps[lngt - 1].stepValue.length)) {
 				this.searchBack(value);
 				// return the values with cb
 				cb(lastStep);
